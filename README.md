@@ -1,4 +1,4 @@
-# Hugo ʕ•ᴥ•ʔ Bear Blog ![Test](https://github.com/janraasch/hugo-bearblog/workflows/CI/badge.svg?branch=master&event=push) [![Pay me][paypal-svg]][paypal-dot-me] [![Sponsor me][github-sponsors-svg]][github-sponsors]
+# Hugo ʕ•ᴥ•ʔ Bear Blog [![CI](https://github.com/janraasch/hugo-bearblog/actions/workflows/ci.yml/badge.svg)](https://github.com/janraasch/hugo-bearblog/actions/workflows/ci.yml)
 
 🧸 A [Hugo](https://gohugo.io/)-theme based on [Bear Blog](https://bearblog.dev).
 
@@ -16,27 +16,21 @@ For a current & working demo of this theme, please check out https://janraasch.g
 
 When the user's browser is running »dark mode«, the dark color scheme will be used automatically. The default is the light/white color scheme. Check out the [`style.html`](https://github.com/janraasch/hugo-bearblog/blob/master/layouts/partials/style.html)-file for the implementation.
 
-## Sponsor 💟
-
-Support my work on this theme via [GitHub Sponsors][github-sponsors] (recurring) or [PayPal][paypal-dot-me] (one-time).
-
-[![GitHub Stats](https://github-readme-stats.vercel.app/api/?username=janraasch)][github-sponsors]
-
 ## Installation
 
 If you already have a Hugo site on your machine, you can simply add this theme via
 
-```
+```bash
 git submodule add https://github.com/janraasch/hugo-bearblog.git themes/hugo-bearblog
 ```
 
-Then, adjust the `config.toml` as detailed below.
+Then, adjust the `hugo.toml` as detailed below.
 
 For more information, read the official [setup guide][hugo-setup-guide] of Hugo.
 
-## Adjust configuration / config.toml
+## Adjust configuration / hugo.toml
 
-Please check out the [config.toml](https://github.com/janraasch/hugo-bearblog/blob/master/exampleSite/config.toml) included in the [exampleSite](https://github.com/janraasch/hugo-bearblog/tree/master/exampleSite) of this theme.
+Please check out the [hugo.toml](https://github.com/janraasch/hugo-bearblog/blob/master/exampleSite/hugo.toml) included in the [exampleSite](https://github.com/janraasch/hugo-bearblog/tree/master/exampleSite) of this theme.
 
 ## Content & structure
 
@@ -54,7 +48,7 @@ The contents of the `index`-page may be changed by editing your `content/_index.
 
 You can add **a new page** via running
 
-```
+```bash
 hugo new my-new-page.md
 ```
 
@@ -62,7 +56,7 @@ hugo new my-new-page.md
 
 You can add **a new blog-post** via running
 
-```
+```bash
 hugo new blog/my-new-post.md
 ```
 
@@ -73,7 +67,12 @@ Add a `custom_head.html`-file to your `layouts/partials`-directory. In there you
 ## Issues / Feedback / Contributing
 Please use [GitHub issues](https://github.com/janraasch/hugo-bearblog/issues) and [Pull Requests](https://github.com/janraasch/hugo-bearblog/pulls).
 
-If you do not have a GitHub-account, please hit me up via e-mail (see [janraasch.com](https://www.janraasch.com)).
+## Development
+Run the `exampleSite` locally via
+
+```bash
+hugo server --source ./exampleSite --themesDir ../..
+```
 
 ## Special Thanks 🎁
 
@@ -82,10 +81,6 @@ A special thank you goes out to [Herman](https://herman.bearblog.dev), for creat
 ## License
 [MIT License](http://en.wikipedia.org/wiki/MIT_License) © [Jan Raasch](https://www.janraasch.com)
 
-[paypal-dot-me]: https://www.paypal.me/janraasch/7,00
-[github-sponsors]: https://github.com/sponsors/janraasch
-[paypal-svg]: https://img.shields.io/badge/onetime-donation-11dde2.svg?logo=paypal
-[github-sponsors-svg]: https://img.shields.io/badge/recurring-sponsorship-ee4aaa.svg?logo=github
 [hugo-setup-guide]: https://gohugo.io/getting-started/installing
 [light-screenshot]: https://raw.githubusercontent.com/janraasch/hugo-bearblog/master/images/screenshot.png
 [dark-screenshot]: https://raw.githubusercontent.com/janraasch/hugo-bearblog/master/images/screenshot-dark.png
